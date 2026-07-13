@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { siteConfig, navLinks } from "@/constants/site";
+import { contactInfo } from "@/constants/contact";
 
 export default function Footer() {
   return (
@@ -29,9 +30,10 @@ export default function Footer() {
           <div>
             <h4 className="font-semibold text-white mb-4">Contact</h4>
             <div className="text-sm text-gray-400 space-y-2">
-              <p>Bukidnon, Philippines</p>
-              <p>info@buktransplant.com</p>
-              <p>+63 (XXX) XXX XXXX</p>
+              <p>{contactInfo.address}</p>
+              <p>{contactInfo.email}</p>
+              <p>{contactInfo.phone}</p>
+              <p className="text-xs text-gray-500">{contactInfo.hours}</p>
             </div>
           </div>
         </div>

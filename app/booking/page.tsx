@@ -17,8 +17,8 @@ import { useBookings } from "@/lib/bookings";
 import { getAICalendarSuggestion, getAIRecommendation } from "@/lib/ai";
 
 const machineFieldCapacity: Record<string, number> = {
-  kw4: 0.5,
-  kw6: 0.8,
+  kw4: 1,
+  kw6: 2,
 };
 
 const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];

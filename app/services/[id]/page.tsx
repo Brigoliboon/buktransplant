@@ -2,16 +2,16 @@
 
 import { useParams } from "next/navigation";
 import { motion } from "framer-motion";
-import { type LucideIcon, Tractor, Settings, Award, Check, ArrowLeft } from "lucide-react";
+import { type LucideIcon, Tractor, Settings, Check, ArrowLeft } from "lucide-react";
 import Link from "next/link";
 import PageHeader from "@/components/shared/PageHeader";
 import { servicePackages } from "@/constants/services";
 
 const iconMap: Record<string, LucideIcon> = {
-  Tractor, Settings, Award,
+  Tractor, Settings,
 };
 
-const bgAccents = ["bg-primary", "bg-accent", "bg-secondary"];
+const bgAccents = ["bg-primary", "bg-accent"];
 
 export default function PackageDetailPage() {
   const { id } = useParams();

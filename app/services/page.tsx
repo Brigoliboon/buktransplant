@@ -1,16 +1,16 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { type LucideIcon, Tractor, Settings, Award, Check } from "lucide-react";
+import { type LucideIcon, Tractor, Settings, Check } from "lucide-react";
 import Link from "next/link";
 import PageHeader from "@/components/shared/PageHeader";
 import { servicePackages } from "@/constants/services";
 
 const iconMap: Record<string, LucideIcon> = {
-  Tractor, Settings, Award,
+  Tractor, Settings,
 };
 
-const bgAccents = ["bg-primary", "bg-accent", "bg-secondary"];
+const bgAccents = ["bg-primary", "bg-accent"];
 
 export default function ServicesPage() {
   return (
@@ -19,7 +19,7 @@ export default function ServicesPage() {
 
       <section className="py-20 bg-light-bg">
         <div className="px-6">
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
             {servicePackages.map((pkg, i) => {
               const Icon = iconMap[pkg.icon];
               return (

@@ -1,7 +1,9 @@
 export interface PricingPlan {
   name: string
+  subtitle: string
   price: number
   unit: string
+  kw6Price?: number
   description: string
   features: string[]
   highlighted?: boolean
@@ -9,25 +11,22 @@ export interface PricingPlan {
 
 export const pricingPlans: PricingPlan[] = [
   {
-    name: "Basic",
-    price: 4500,
+    name: "Package A",
+    subtitle: "Transplanting Only",
+    price: 5000,
+    kw6Price: 5500,
     unit: "per hectare",
-    description: "Essential mechanized transplanting for small farms.",
-    features: ["Standard transplanter", "Operator included", "Basic scheduling", "Manual report"],
+    description: "Mechanized transplanting service — machine and operator provided.",
+    features: ["Machine rental (KW4 or KW6)", "Operator included", "Per-hectare pricing", "Flexible scheduling"],
   },
   {
-    name: "Standard",
-    price: 6500,
+    name: "Package B",
+    subtitle: "Complete Establishment",
+    price: 9000,
+    kw6Price: 9500,
     unit: "per hectare",
-    description: "Enhanced service with digital features and priority booking.",
-    features: ["Modern transplanter", "Certified operator", "Priority scheduling", "GPS field mapping", "Digital report", "SMS notifications"],
+    description: "Full-service package with Dapog seedling establishment included.",
+    features: ["Machine rental (KW4 or KW6)", "Operator included", "Dapog seedling establishment", "End-to-end service", "Per-hectare pricing"],
     highlighted: true,
-  },
-  {
-    name: "Premium",
-    price: 8500,
-    unit: "per hectare",
-    description: "Premium service with AI optimization and full support.",
-    features: ["Latest model machine", "Senior operator", "AI-optimized scheduling", "Real-time GPS tracking", "Digital analytics report", "Priority support", "Weather adjustments"],
   },
 ];

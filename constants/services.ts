@@ -8,24 +8,17 @@ export interface ServicePackage {
 
 export const servicePackages: ServicePackage[] = [
   {
-    id: "basic",
-    title: "Basic Transplanting",
-    description: "Standard mechanized rice transplanting service for small to medium farms.",
-    features: ["Machine rental", "Operator included", "1 hectare coverage", "Basic scheduling"],
+    id: "transplant-only",
+    title: "Transplanting Only (Package A)",
+    description: "Mechanized rice transplanting service — machine and operator provided, priced per hectare.",
+    features: ["Machine rental (KW4 or KW6)", "Operator included", "Per-hectare pricing", "Flexible scheduling"],
     icon: "Tractor",
   },
   {
-    id: "standard",
-    title: "Standard Transplanting",
-    description: "Enhanced transplanting service with priority scheduling and digital tracking.",
-    features: ["Machine rental", "Certified operator", "Up to 3 hectares", "Priority scheduling", "GPS field mapping", "Digital completion report"],
+    id: "complete-establishment",
+    title: "Complete Establishment (Package B)",
+    description: "Full-service package including transplanting and Dapog seedling establishment.",
+    features: ["Machine rental (KW4 or KW6)", "Operator included", "Dapog seedling establishment", "End-to-end service", "Per-hectare pricing"],
     icon: "Settings",
-  },
-  {
-    id: "premium",
-    title: "Premium Transplanting",
-    description: "Full-service package with AI-optimized scheduling and comprehensive support.",
-    features: ["Latest model machines", "Senior certified operator", "Unlimited hectares", "AI-optimized scheduling", "Real-time GPS tracking", "Digital report & analytics", "Dedicated support"],
-    icon: "Award",
   },
 ];

@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { siteConfig, navLinks } from "@/constants/site";
 import { useAuth, getDashboardPath } from "@/lib/auth";
@@ -28,8 +29,9 @@ export default function Navbar() {
       }`}
     >
       <div className="px-6 flex items-center justify-between h-16">
-        <Link href="/" className="text-xl font-bold text-primary">
-          {siteConfig.name}
+        <Link href="/" className="flex items-center gap-2">
+          <Image src="/logo.png" alt={siteConfig.name} width={36} height={36} className="object-contain" />
+          <span className="text-xl font-bold text-primary">{siteConfig.name}</span>
         </Link>
 
         <div className="hidden md:flex items-center gap-8">
